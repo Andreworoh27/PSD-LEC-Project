@@ -2,12 +2,8 @@ package authentication.view;
 
 import java.util.Scanner;
 
-import javax.swing.InputMap;
-
-import org.w3c.dom.events.Event;
-
-import authentication.context.events.Login;
-import authentication.context.events.Register;
+import authentication.context.authentication_context.events.Login;
+import authentication.context.authentication_context.events.Register;
 
 public class AuthenticationPage {
     Scanner scan = new Scanner(System.in);

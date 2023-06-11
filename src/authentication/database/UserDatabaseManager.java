@@ -7,8 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import authentication.context.models.User;
-import authentication.context.models.ValueObject.Name;
+import authentication.context.authentication_context.models.Entity.User;
+import authentication.context.authentication_context.models.ValueObject.Name;
 
 public class UserDatabaseManager {
     private static ArrayList<User> usersList = new ArrayList<>();

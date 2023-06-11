@@ -1,11 +1,9 @@
-package authentication.context.controller;
+package authentication.context.authentication_context.controller;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Handler;
 
-import authentication.context.handler.UserHandler;
-import authentication.context.models.User;
+import authentication.context.authentication_context.handler.UserHandler;
+import authentication.context.authentication_context.models.Entity.User;
 
 public class UserController{
 

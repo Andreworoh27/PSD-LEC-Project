@@ -1,6 +1,6 @@
-package authentication.context.models;
+package authentication.context.authentication_context.models.Entity;
 
-import authentication.context.models.ValueObject.Name;
+import authentication.context.authentication_context.models.ValueObject.Name;
 
 public class User {
     Name name;
