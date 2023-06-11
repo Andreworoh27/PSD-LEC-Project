@@ -3,7 +3,7 @@ package authentication.context.authentication_context.handler;
 import java.util.ArrayList;
 import java.util.List;
 
-import authentication.context.authentication_context.models.Entity.User;
+import authentication.context.authentication_context.models.entity.User;
 import authentication.context.authentication_context.repository.UserRepository;
 
 public class UserHandler {

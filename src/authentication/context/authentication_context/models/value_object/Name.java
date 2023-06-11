@@ -1,4 +1,4 @@
-package authentication.context.authentication_context.models.ValueObject;
+package authentication.context.authentication_context.models.value_object;
 
 public class Name {
     String firstName;

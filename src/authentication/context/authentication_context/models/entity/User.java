@@ -1,12 +1,13 @@
-package authentication.context.authentication_context.models.Entity;
+package authentication.context.authentication_context.models.entity;
 
-import authentication.context.authentication_context.models.ValueObject.Name;
+import authentication.context.authentication_context.models.value_object.Name;
 
 public class User {
     Name name;
     String userName;
     String userId;
     String userPassword;
+    //TODO: Make ArrayList of Cart
 
     public User(String userId, String userName, Name name, String userPassword) {
         this.userId = userId;
