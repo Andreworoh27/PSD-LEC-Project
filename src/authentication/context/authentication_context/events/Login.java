@@ -1,10 +1,9 @@
-package authentication.context.events;
+package authentication.context.authentication_context.events;
 
 import java.util.ArrayList;
 
-import authentication.context.controller.Authentication;
-import authentication.context.controller.UserController;
-import authentication.context.models.User;
+import authentication.context.authentication_context.controller.UserController;
+import authentication.context.authentication_context.models.Entity.User;
 
 public class Login {
     private static Authentication auth = Authentication.getInstance();

@@ -1,9 +1,8 @@
-package authentication.context.repository;
+package authentication.context.authentication_context.repository;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import authentication.context.models.User;
+import authentication.context.authentication_context.models.Entity.User;
 import authentication.database.UserDatabaseManager;
 
 public class UserRepository {

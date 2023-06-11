@@ -1,6 +1,6 @@
-package authentication.context.controller;
+package authentication.context.authentication_context.events;
 
-import authentication.context.models.User;
+import authentication.context.authentication_context.models.Entity.User;
 
 public class Authentication {
     private User currentUser;
