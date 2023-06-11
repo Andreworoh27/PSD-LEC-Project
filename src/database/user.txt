@@ -1,3 +1,6 @@
 CS001#username1#Test#Customer1#testpassword123
 CS002#username2#Test#Customer2#testpassword123
 CS003#username3#Test#Customer3#testpassword123
+CS004#juan#juan#gau#juan
+CS005#juju#juan#Gauthama#123
+CS006#a#a#a#a

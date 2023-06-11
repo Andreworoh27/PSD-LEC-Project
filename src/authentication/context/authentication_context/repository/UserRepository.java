@@ -2,8 +2,8 @@ package authentication.context.authentication_context.repository;
 
 import java.util.ArrayList;
 
-import authentication.context.authentication_context.models.Entity.User;
-import authentication.database.UserDatabaseManager;
+import authentication.connector.UserDatabaseManager;
+import authentication.context.authentication_context.models.entity.User;
 
 public class UserRepository {
     private static UserDatabaseManager db = UserDatabaseManager.getInstance();

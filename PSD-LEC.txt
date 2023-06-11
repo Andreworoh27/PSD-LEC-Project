@@ -1,0 +1,69 @@
+CanEat -> Alesan, later belakang, tujuan, dasar teori copas dari paper RMCS Juan ama Russ
+Bahasa: Java
+penyimpanan data: .txt
+
+-> CanEat yang dibikin cuman customer side
+	- Login
+	- Regis
+	- Lihat shop
+	- Lihat food yang ada dalam shop
+	- Beli food -> quantity, notes -> masukin ke cart
+	- Bisa lihat cart, beli -> pilih tanggal sama waktu pickup -> pilih metode pembayaran (by console aja) -> trans successful (receipt)
+	- Transaction history
+
+
+Domain -> Aplikasi Pemesanan Makanan Kantin
+Subdomain:
+	- Generic: Authentication (authentication context), Payment (payment context) 
+	- Core: Food Ordering
+	- Supporting: Catalogue (food context, shop context)
+
+Pembagian "Database" (ORM):
+- Authentication: Customer -> CustomerID, CustomerUsername, CustomerName, CustomerPassword
+- Catalogue:
+	Food Context: Food -> FoodID, FoodName, FoodCurrency, FoodPrice, ShopID
+	Shop Context: Shop -> ShopID, ShopName, ShopDescription
+- Food Ordering: TransactionHeader -> TransactionID, CustomerID, ShopID, TransactionDateTime, PickupDateTime; TransactionDetail -> TransactionID, FoodID, Quantity, Notes
+
+Payment -> (interface, punya banyak subclass)
+
+PickupDateTime:
+Mau ambil brp hari dari sekarang -> Ambil date sekarang + x harinya tdi
+Mau diambil jam brp -> suruh pilih integer 7 - 19
+
+OOP:
+Entity:
+authentication;
+	- Customer -> String CustomerID, String CustomerUsername, Name CustomerName, String CustomerPassword
+food:
+	- Food -> String FoodID, String FoodName, Price FoodPrice
+shop:
+	- Shop -> String ShopID, String ShopName, String ShopDescription, List<Food> ListOfFood (kasih aja arraylist)
+food_ordering:
+	- Header -> String TransactionID, Customer buyer, Shop seller, DateTime TransactionDateTime, DateTime PickupDateTime, ArrayList<Detail> TransactionDetail
+	- Detail -> Food food, Integer quantity, String notes
+
+Value Object:
+authentication:
+	- Name -> String FirstName, String LastName
+food:
+	- Price -> String Currency, double value
+shop:
+	- NONE
+food_ordering:
+	- NONE
+
+Pembagian tugas:
+Phase I:
+- Paper: Russ
+	- Bab I
+	- Bab II
+	- Bab III
+- Coding:
+	- Andrew: Authentication 
+	- Juan: Shop, Food
+Deadline: Minggu, 11 Juni 2023
+
+Folder:
+Subdomain -> (Model -> Entity, Value Object), (Context -> Event, Controller, Handler, Repository, Factory)
+View

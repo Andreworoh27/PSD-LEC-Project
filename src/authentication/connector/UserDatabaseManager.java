@@ -1,4 +1,4 @@
-package authentication.database;
+package authentication.connector;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,8 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import authentication.context.authentication_context.models.Entity.User;
-import authentication.context.authentication_context.models.ValueObject.Name;
+import authentication.context.authentication_context.models.entity.User;
+import authentication.context.authentication_context.models.value_object.Name;
 
 public class UserDatabaseManager {
     private static ArrayList<User> usersList = new ArrayList<>();
@@ -57,19 +57,19 @@ public class UserDatabaseManager {
             writer.write(data);
             writer.newLine();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("File Not found!");
         }
     }
 
     public ArrayList<User> getUserslList() {
-        readFile("./src/authentication/database/user.txt");
+        readFile("./src/database/user.txt");
         return usersList;
     }
 
     public boolean addNewUser(User user) {
         String data = user.getUserId() + "#" + user.getUserName() + "#" + user.getName().getFirstName() + "#"
                 + user.getName().getLastName() + "#" + user.getUserPassword();
-        String filePath = "./src/authentication/database/user.txt";
+        String filePath = "./src/database/user.txt";
         appendToFile(filePath, data);
         usersList.add(user);
         return true;

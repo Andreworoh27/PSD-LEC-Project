@@ -1,7 +1,7 @@
 package authentication.context.authentication_context.factory;
 
-import authentication.context.authentication_context.models.Entity.User;
-import authentication.context.authentication_context.models.ValueObject.Name;
+import authentication.context.authentication_context.models.entity.User;
+import authentication.context.authentication_context.models.value_object.Name;
 
 public class UserFactory {
 

@@ -1,26 +1,22 @@
-package authentication.view;
+package view;
 
 import java.util.Scanner;
 
-import authentication.context.authentication_context.events.Login;
-import authentication.context.authentication_context.events.Register;
+import authentication.context.authentication_context.events.LoginEvent;
+import authentication.context.authentication_context.events.RegisterEvent;
+import utility.UtilityPage;
 
 public class AuthenticationPage {
     Scanner scan = new Scanner(System.in);
 
-    protected AuthenticationPage() {
+    public AuthenticationPage() {
         int input = 0;
         do {
             System.out.println("Menu : ");
             System.out.println("1. Login");
             System.out.println("2. Register");
             System.out.println("3. Exit app");
-            try {
-                input = scan.nextInt();
-            } catch (Exception e) {
-                System.out.println("invalid input");
-            }
-            scan.nextLine();
+            input = UtilityPage.getOption(1, 3);
             switch (input) {
                 case 1:
                     loginPage();
@@ -34,19 +30,15 @@ public class AuthenticationPage {
         } while (input <= 2);
     }
 
-    protected void loginPage() {
-        System.out.print("username :  ");
+    public void loginPage() {
+        System.out.print("username : ");
         String username = scan.nextLine();
         System.out.print("password : ");
         String password = scan.nextLine();
-        if (Login.login(username, password)) {
-            System.out.println("Login success");
-        } else {
-            System.out.println("Login failed");
-        }
+        LoginEvent.login(username, password);
     }
 
-    protected void registerPage() {
+    public void registerPage() {
         System.out.print("input your username : ");
         String username = scan.nextLine();
         System.out.print("input your first name : ");
@@ -55,10 +47,6 @@ public class AuthenticationPage {
         String lastName = scan.nextLine();
         System.out.print("input you password : ");
         String password = scan.nextLine();
-        Register.register(username,firstName,lastName,password);
-    }
-
-    public static void main(String[] args) {
-        new AuthenticationPage();
+        RegisterEvent.register(username,firstName,lastName,password);
     }
 }

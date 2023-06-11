@@ -1,0 +1,3 @@
+SH001#Rumah Makan Padang "Kita Semua"#Nasi padang, rendang, pasti kenyang!
+SH002#Kantin Kita#Rumah makan chinese food
+SH003#Minum Dulu Kuy#Yuk mepet dulu bos, yang haus, yang haus...

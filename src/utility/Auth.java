@@ -1,18 +1,18 @@
-package authentication.context.authentication_context.events;
+package utility;
 
-import authentication.context.authentication_context.models.Entity.User;
+import authentication.context.authentication_context.models.entity.User;
 
-public class Authentication {
+public class Auth {
     private User currentUser;
 
-    private static Authentication instace = null;
+    private static Auth instace = null;
     private static boolean isAuthenticate = false;
 
-    public static Authentication getInstance() {
+    public static Auth getInstance() {
         if (instace == null) {
-            synchronized (Authentication.class) {
+            synchronized (Auth.class) {
                 if (instace == null) {
-                    instace = new Authentication();
+                    instace = new Auth();
                 }
             }
         }
@@ -28,7 +28,7 @@ public class Authentication {
     }
 
     public void setAuthenticate(boolean isAuthenticate) {
-        Authentication.isAuthenticate = isAuthenticate;
+        Auth.isAuthenticate = isAuthenticate;
     }
 
     public static boolean getIsAuthenticate() {
