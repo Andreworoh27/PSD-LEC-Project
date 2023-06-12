@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import catalogue.connector.ShopDatabaseManager;
 import catalogue.context.food_context.events.OnLoadShopEvent;
-import catalogue.context.shop_context.controller.models.entity.Shop;
 import catalogue.context.shop_context.factory.ShopFactory;
+import catalogue.context.shop_context.models.entity.Shop;
 
 public class ShopRepository {
 	private static ShopDatabaseManager db = ShopDatabaseManager.getInstance();
@@ -18,4 +18,13 @@ public class ShopRepository {
 		shop.setListOfFood(OnLoadShopEvent.getShopFood(shopID));
 		return shop;
 	}	
+	
+	public static Shop getShop(String shopID) {
+		for(Shop s : getAllShop()) {
+			if(s.getShopID().equals(shopID)) {
+				return s;
+			}
+		}
+		return null;
+	}
 }

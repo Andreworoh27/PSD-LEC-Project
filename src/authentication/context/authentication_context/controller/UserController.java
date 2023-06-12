@@ -14,4 +14,8 @@ public class UserController{
     public static boolean addNewUser(User newUser){
         return UserHandler.addNewUser(newUser);
     }
+    
+    public static User getUser(String userID) {
+    	return UserHandler.getUser(userID);
+    }
 }

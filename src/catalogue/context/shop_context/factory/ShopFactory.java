@@ -1,6 +1,6 @@
 package catalogue.context.shop_context.factory;
 
-import catalogue.context.shop_context.controller.models.entity.Shop;
+import catalogue.context.shop_context.models.entity.Shop;
 
 public class ShopFactory {
 	public static Shop createShop(String shopID, String shopName, String shopDescription) {

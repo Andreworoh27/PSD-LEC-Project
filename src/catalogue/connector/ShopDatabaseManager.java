@@ -6,8 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import catalogue.context.shop_context.controller.models.entity.Shop;
-import catalogue.context.shop_context.controller.models.value_object.ShopController;
+import catalogue.context.shop_context.controller.ShopController;
+import catalogue.context.shop_context.models.entity.Shop;
 
 public class ShopDatabaseManager {
 	private static ShopDatabaseManager instance = null;

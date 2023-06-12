@@ -22,4 +22,8 @@ public class UserHandler {
         newUser.setUserId(currentId);
         return UserRepository.addNewUser(newUser);
     }
+    
+    public static User getUser(String userID) {
+    	return UserRepository.getUser(userID);
+    }
 }
