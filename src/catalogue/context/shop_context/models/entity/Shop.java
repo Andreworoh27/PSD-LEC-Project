@@ -1,4 +1,4 @@
-package catalogue.context.shop_context.controller.models.entity;
+package catalogue.context.shop_context.models.entity;
 
 import java.util.ArrayList;
 

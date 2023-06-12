@@ -15,4 +15,13 @@ public class UserRepository {
     public static boolean addNewUser(User user){
         return db.addNewUser(user);
     }
+    
+    public static User getUser(String userID) {
+    	for(User u : getAllUsers()) {
+    		if(u.getUserId().equals(userID)) {
+    			return u;
+    		}
+    	}
+    	return null;
+    }
 }

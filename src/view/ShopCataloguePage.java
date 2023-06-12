@@ -1,8 +1,8 @@
 package view;
 
-import catalogue.context.shop_context.controller.models.entity.Shop;
 import catalogue.context.shop_context.events.GoToShopDetailEvent;
 import catalogue.context.shop_context.events.OnLoadShopEvent;
+import catalogue.context.shop_context.models.entity.Shop;
 import utility.UtilityPage;
 
 public class ShopCataloguePage {
