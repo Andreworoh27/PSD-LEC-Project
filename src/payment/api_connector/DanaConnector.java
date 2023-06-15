@@ -1,4 +1,4 @@
-package payment.context.payment_context.api_connector;
+package payment.api_connector;
 
 import java.util.Random;
 
