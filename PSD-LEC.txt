@@ -9,7 +9,9 @@ penyimpanan data: .txt
 	- Lihat food yang ada dalam shop
 	- Beli food -> quantity, notes -> masukin ke cart
 	- Bisa lihat cart, beli -> pilih tanggal sama waktu pickup -> pilih metode pembayaran (by console aja) -> trans successful (receipt)
-	- Transaction history
+	- Transaction history -> Lihat transaction yang dilakuin sama user itu
+	- Logout -> bersihin Auth sama Cart
+	- Exit Application
 
 
 Domain -> Aplikasi Pemesanan Makanan Kantin
@@ -23,7 +25,9 @@ Pembagian "Database" (ORM):
 - Catalogue:
 	Food Context: Food -> FoodID, FoodName, FoodCurrency, FoodPrice, ShopID
 	Shop Context: Shop -> ShopID, ShopName, ShopDescription
-- Food Ordering: TransactionHeader -> TransactionID, CustomerID, ShopID, TransactionDateTime, PickupDateTime; TransactionDetail -> TransactionID, FoodID, Quantity, Notes
+- Food Ordering:
+	Transaction Context: TransactionHeader -> TransactionID, CustomerID, TransactionDateTime, PickupDateTime; TransactionDetail -> TransactionID, FoodID, Quantity, Notes
+	Cart Context: - (No database)
 
 Payment -> (interface, punya banyak subclass)
 
@@ -33,15 +37,17 @@ Mau diambil jam brp -> suruh pilih integer 7 - 19
 
 OOP:
 Entity:
-authentication;
+authentication:
 	- Customer -> String CustomerID, String CustomerUsername, Name CustomerName, String CustomerPassword
 food:
 	- Food -> String FoodID, String FoodName, Price FoodPrice
 shop:
 	- Shop -> String ShopID, String ShopName, String ShopDescription, List<Food> ListOfFood (kasih aja arraylist)
-food_ordering:
-	- Header -> String TransactionID, Customer buyer, Shop seller, DateTime TransactionDateTime, DateTime PickupDateTime, ArrayList<Detail> TransactionDetail
+transaction:
+	- Header -> String TransactionID, Customer buyer, DateTime TransactionDateTime, DateTime PickupDateTime, ArrayList<Detail> TransactionDetail
 	- Detail -> Food food, Integer quantity, String notes
+cart:
+	- Cart -> Food food, Integer quantity, String Notes, static List<Cart> CartList (kalo logout jangan lupa di null in static nya)
 
 Value Object:
 authentication:
@@ -56,14 +62,29 @@ food_ordering:
 Pembagian tugas:
 Phase I:
 - Paper: Russ
-	- Bab I
-	- Bab II
+	- Bab I V
+	- Bab II V
 	- Bab III
+	- Bab V V
 - Coding:
 	- Andrew: Authentication 
 	- Juan: Shop, Food
 Deadline: Minggu, 11 Juni 2023
 
+Phase II:
+- Paper: Russ
+	- Bab III
+	- Bab IV
+- Coding:
+	- Andrew: Transaction, Cart
+	- Juan: Payment, View
+Deadline: 17 Juni 2023
+
+
 Folder:
 Subdomain -> (Model -> Entity, Value Object), (Context -> Event, Controller, Handler, Repository, Factory)
 View
+
+Catalogue -> show shop V -> show food V -> add to cart (minta quantity sama notes)
+Cart -> view cart (prompt checkout) (sementara readonly) -> payment -> receipt (tampilin transaksi yang baru dibuat)
+History -> show all
