@@ -1,8 +1,8 @@
 package payment.context.payment_context.repository;
 
-import payment.context.payment_context.api_connector.DanaConnector;
-import payment.context.payment_context.api_connector.GopayConnector;
-import payment.context.payment_context.api_connector.OVOConnector;
+import payment.api_connector.DanaConnector;
+import payment.api_connector.GopayConnector;
+import payment.api_connector.OVOConnector;
 import payment.context.payment_context.factory.PaymentFactory;
 import payment.context.payment_context.model.entity.DanaPayment;
 import payment.context.payment_context.model.entity.GopayPayment;
