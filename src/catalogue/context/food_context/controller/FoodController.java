@@ -19,4 +19,8 @@ public class FoodController {
 	public static ArrayList<Food> getfoodShop(String shopID){
 		return FoodHandler.getfoodShop(shopID);
 	}
+
+	public static Food getFoodById(String foodId){
+		return FoodRepository.getFoodById(foodId);
+	}
 }
