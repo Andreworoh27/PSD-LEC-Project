@@ -62,6 +62,7 @@ public class UserDatabaseManager {
     }
 
     public ArrayList<User> getUserslList() {
+        usersList.clear();
         readFile("./src/database/user.txt");
         return usersList;
     }
