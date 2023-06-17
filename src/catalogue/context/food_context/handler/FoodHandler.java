@@ -1,6 +1,7 @@
 package catalogue.context.food_context.handler;
 
 import java.util.ArrayList;
+import java.util.ResourceBundle.Control;
 
 import catalogue.context.food_context.models.entity.Food;
 import catalogue.context.food_context.models.value_object.Price;
@@ -17,5 +18,9 @@ public class FoodHandler {
 	
 	public static ArrayList<Food> getfoodShop(String shopID){
 		return FoodRepository.getFoodShop(shopID);
+	}
+
+	public static Food getFoodById(String foodId){
+		return FoodRepository.getFoodById(foodId);
 	}
 }

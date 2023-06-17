@@ -27,4 +27,14 @@ public class FoodRepository {
 	public static Food createFood(String foodID, String foodName, Price price, String shopID) {
 		return FoodFactory.createFood(foodID, foodName, price, shopID);
 	}
+
+	public static Food getFoodById(String foodId){
+		ArrayList<Food> foods = db.getFoodList();
+		for (Food food : foods) {
+			if(food.getFoodID().equals(foodId)){
+				return food;
+			}
+		}
+		return null;
+	}
 }
