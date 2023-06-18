@@ -2,6 +2,7 @@ package view;
 
 import java.util.Scanner;
 
+import authentication.context.authentication_context.events.GoToHomePageEvent;
 import authentication.context.authentication_context.events.LoginEvent;
 import authentication.context.authentication_context.events.RegisterEvent;
 import utility.UtilityPage;
@@ -12,6 +13,7 @@ public class AuthenticationPage {
     public AuthenticationPage() {
         int input = 0;
         do {
+        	UtilityPage.changePage();
             System.out.println("Menu : ");
             System.out.println("1. Login");
             System.out.println("2. Register");
@@ -24,10 +26,11 @@ public class AuthenticationPage {
                 case 2:
                     registerPage();
                     break;
-                default:
+                case 3:
+                	System.out.println("Exitting app...");
                     break;
             }
-        } while (input <= 2);
+        } while (input != 3);
     }
 
     public void loginPage() {
@@ -35,7 +38,9 @@ public class AuthenticationPage {
         String username = scan.nextLine();
         System.out.print("password : ");
         String password = scan.nextLine();
-        LoginEvent.login(username, password);
+        if(LoginEvent.login(username, password)) {
+        	GoToHomePageEvent.run();
+        }
     }
 
     public void registerPage() {

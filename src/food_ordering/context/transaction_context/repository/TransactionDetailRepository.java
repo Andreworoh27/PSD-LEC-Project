@@ -10,4 +10,14 @@ public class TransactionDetailRepository {
     public static ArrayList<TransactionDetail> getAllTransactionDetails(){
         return db.getTransactionDetails();
     }
+    
+    public static ArrayList<TransactionDetail> getDetailTransaction(String trId){
+    	ArrayList<TransactionDetail> detailList = new ArrayList<TransactionDetail>();
+    	for(TransactionDetail tr : getAllTransactionDetails()) {
+    		if(tr.getTransactionId().equals(trId)) {
+    			detailList.add(tr);
+    		}
+    	}
+    	return detailList;
+    }
 }

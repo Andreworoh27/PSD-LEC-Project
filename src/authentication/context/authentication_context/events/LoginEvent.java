@@ -8,15 +8,15 @@ import utility.Auth;
 
 public class LoginEvent {
     private static Auth auth = Auth.getInstance();
-    public static void login(String name, String password){
+    public static Boolean login(String name, String password){
         ArrayList<User> users = UserController.getAllUsers();
         for (User user : users) {
             if(name.equals(user.getUserName()) && password.equals(user.getUserPassword())){
                 auth.setCurrentUser(user);
                 auth.setAuthenticate(true);
-                System.out.println("found");
-                GoToHomePageEvent.run();
+                return true;
             }
         }
+        return false;
     }
 }

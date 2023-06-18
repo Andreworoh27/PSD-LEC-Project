@@ -10,13 +10,16 @@ public class ShopCataloguePage {
 	public ShopCataloguePage() {
 		int opt = -1;
 		do {
+			UtilityPage.changePage();
 			System.out.println("----------------------------------");
 			System.out.println("|Select shop from your canteen...|");
 			System.out.println("----------------------------------");
 			System.out.println();
 			int count = shopDisplay();
 			opt = UtilityPage.getOption(0, count);
-			GoToShopDetailEvent.run(OnLoadShopEvent.run().get(opt - 1).getShopID());
+			if(opt != 0) {
+				GoToShopDetailEvent.run(OnLoadShopEvent.run().get(opt - 1).getShopID());
+			}
 		}while(opt!=0);
 	}
 	

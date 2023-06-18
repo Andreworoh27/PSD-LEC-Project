@@ -22,4 +22,13 @@ public class OnSelectTransactionHeader {
         TransactionHeaderController.addNewTransaction(user,transactionDate,pickupDate,cartlist);
         return true;
     }
+    
+    public static TransactionHeader getHeaderById(String transactionId) {
+    	return TransactionHeaderController.getHeaderById(transactionId);
+    }
+    
+    public static TransactionHeader getLatestTransaction() {
+    	User user = auth.getCurrentUser();
+    	return TransactionHeaderController.getLatestTransaction(user.getUserId());
+    }
 }

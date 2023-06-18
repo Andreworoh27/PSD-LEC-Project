@@ -5,6 +5,8 @@ import catalogue.context.food_context.models.value_object.Price;
 public abstract class PaymentAbstract {
 	String paymentID;
 	
+	
+	
 	/**
 	 * @param paymentID
 	 */
@@ -12,7 +14,7 @@ public abstract class PaymentAbstract {
 		super();
 		this.paymentID = paymentID;
 	}
-	
+
 	public String getPaymentID() {
 		return paymentID;
 	}

@@ -9,4 +9,8 @@ public class OnSelectTransactionDetail {
     public static ArrayList<TransactionDetail> getAllTransactionDetails(){
         return TransactionDetailController.getAllTransactionDetails();
     }
+    
+    public static ArrayList<TransactionDetail> getDetailTransaction(String trId){
+    	return TransactionDetailController.getDetailTransaction(trId);
+    }
 }

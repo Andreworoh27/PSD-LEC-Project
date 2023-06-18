@@ -5,18 +5,18 @@ import payment.context.payment_context.model.entity.GopayPayment;
 import payment.context.payment_context.model.entity.OVOPayment;
 
 public class PaymentFactory {
-	public static GopayPayment createGopayPayment(String paymentID) {
-		GopayPayment gp = new GopayPayment(paymentID);
+	public static GopayPayment createGopayPayment(String paymentId) {
+		GopayPayment gp = new GopayPayment(paymentId);
 		return gp;
 	}
 	
-	public static OVOPayment createOvoPayment(String paymentID) {
-		OVOPayment op = new OVOPayment(paymentID);
+	public static OVOPayment createOvoPayment(String paymentId) {
+		OVOPayment op = new OVOPayment(paymentId);
 		return op;
 	}
 	
-	public static DanaPayment createDanaPayment(String paymentID) {
-		DanaPayment dp = new DanaPayment(paymentID);
+	public static DanaPayment createDanaPayment(String paymentId) {
+		DanaPayment dp = new DanaPayment(paymentId);
 		return dp;
 	}
 }

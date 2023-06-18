@@ -100,7 +100,7 @@ public class TransactionHeaderDatabaseManager {
     public boolean addNewTransactionHeader(TransactionHeader transactionHeader) {
         String data = transactionHeader.getTransactionID() + "#" + transactionHeader.getBuyer().getUserId() + "#"
                 + transactionHeader.getStringPickupDateFormat() + "#"
-                + transactionHeader.getStringTransactionDateFormat() + "\n";
+                + transactionHeader.getStringTransactionDateFormat();
         String filePath = "./src/database/transactionHeader.txt";
         appendToFile(filePath, data);
         transactionheaders.add(transactionHeader);

@@ -32,9 +32,18 @@ public class DanaConnector implements APIConnectorInterface {
 	}
 
 	@Override
-	public String pay(String paymentID) {
-		// TODO Auto-generated method stub
-		return null;
+	public void pay() {
+		System.out.print("Connecting to Dana server");
+		for(int i =0; i<3; i++) {
+			System.out.print(".");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		System.out.println();
 	}
 	
 	
