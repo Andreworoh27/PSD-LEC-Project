@@ -12,7 +12,7 @@ import java.util.Date;
 
 import catalogue.context.food_context.events.FoodOnChosenEvent;
 import catalogue.context.food_context.models.entity.Food;
-import food_ordering.context.transaction_context.models.TransactionDetail;
+import food_ordering.context.transaction_context.models.entity.TransactionDetail;
 
 public class TransactionDetailDatabaseManager {
     private static TransactionDetailDatabaseManager instance = null;

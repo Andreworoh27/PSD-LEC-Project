@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 import food_ordering.context.transaction_context.events.OnSelectTransactionDetail;
 import food_ordering.context.transaction_context.events.OnSelectTransactionHeader;
-import food_ordering.context.transaction_context.models.TransactionDetail;
-import food_ordering.context.transaction_context.models.TransactionHeader;
+import food_ordering.context.transaction_context.models.entity.TransactionDetail;
+import food_ordering.context.transaction_context.models.entity.TransactionHeader;
 import utility.UtilityPage;
 
 public class TransactionHistoryPage {

@@ -7,7 +7,7 @@ import java.util.logging.Handler;
 import authentication.context.authentication_context.models.entity.User;
 import food_ordering.context.cart_context.models.entity.Cart;
 import food_ordering.context.transaction_context.handler.TransactionHeaderHandler;
-import food_ordering.context.transaction_context.models.TransactionHeader;
+import food_ordering.context.transaction_context.models.entity.TransactionHeader;
 import food_ordering.context.transaction_context.repository.TransactionHeaderRepository;
 
 public class TransactionHeaderController {

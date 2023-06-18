@@ -3,7 +3,7 @@ package food_ordering.context.transaction_context.repository;
 import java.util.ArrayList;
 
 import food_ordering.connector.TransactionDetailDatabaseManager;
-import food_ordering.context.transaction_context.models.TransactionDetail;
+import food_ordering.context.transaction_context.models.entity.TransactionDetail;
 
 public class TransactionDetailRepository {
     static TransactionDetailDatabaseManager db = TransactionDetailDatabaseManager.getInstance();

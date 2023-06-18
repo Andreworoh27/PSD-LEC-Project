@@ -1,4 +1,4 @@
-package food_ordering.context.transaction_context.models;
+package food_ordering.context.transaction_context.models.entity;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;

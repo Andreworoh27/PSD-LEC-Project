@@ -5,8 +5,8 @@ import java.util.Date;
 
 import authentication.context.authentication_context.models.entity.User;
 import food_ordering.context.cart_context.models.entity.Cart;
-import food_ordering.context.transaction_context.models.TransactionDetail;
-import food_ordering.context.transaction_context.models.TransactionHeader;
+import food_ordering.context.transaction_context.models.entity.TransactionDetail;
+import food_ordering.context.transaction_context.models.entity.TransactionHeader;
 
 public class TransactionHeaderFactory {
     public static TransactionHeader makeNewTransactionHeader(String transactionId, User buyer, Date transactionDate, Date pickupDate, ArrayList<TransactionDetail> details){

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import food_ordering.context.transaction_context.handler.TransactionDetailHandler;
 import food_ordering.context.transaction_context.handler.TransactionHeaderHandler;
-import food_ordering.context.transaction_context.models.TransactionDetail;
-import food_ordering.context.transaction_context.models.TransactionHeader;
+import food_ordering.context.transaction_context.models.entity.TransactionDetail;
+import food_ordering.context.transaction_context.models.entity.TransactionHeader;
 import food_ordering.context.transaction_context.repository.TransactionHeaderRepository;
 
 public class TransactionDetailController {

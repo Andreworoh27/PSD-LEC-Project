@@ -1,6 +1,6 @@
 package food_ordering.context.transaction_context.events;
 
-import food_ordering.context.transaction_context.models.TransactionHeader;
+import food_ordering.context.transaction_context.models.entity.TransactionHeader;
 import view.ReceiptPage;
 
 public class GoToReceiptPageEvent {

@@ -7,7 +7,7 @@ import catalogue.context.shop_context.events.GoToShopCatalogueEvent;
 import food_ordering.context.cart_context.events.GoToCartEvent;
 import food_ordering.context.transaction_context.events.GoToTransactionHistoryPageEvent;
 import food_ordering.context.transaction_context.events.OnSelectTransactionHeader;
-import food_ordering.context.transaction_context.models.TransactionHeader;
+import food_ordering.context.transaction_context.models.entity.TransactionHeader;
 import utility.Auth;
 import utility.UtilityPage;
 

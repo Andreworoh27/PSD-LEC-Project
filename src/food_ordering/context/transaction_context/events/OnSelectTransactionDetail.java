@@ -3,7 +3,7 @@ package food_ordering.context.transaction_context.events;
 import java.util.ArrayList;
 
 import food_ordering.context.transaction_context.controller.TransactionDetailController;
-import food_ordering.context.transaction_context.models.TransactionDetail;
+import food_ordering.context.transaction_context.models.entity.TransactionDetail;
 
 public class OnSelectTransactionDetail {
     public static ArrayList<TransactionDetail> getAllTransactionDetails(){

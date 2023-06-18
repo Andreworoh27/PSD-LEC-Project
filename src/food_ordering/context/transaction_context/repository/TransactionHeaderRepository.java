@@ -12,8 +12,8 @@ import food_ordering.context.cart_context.models.entity.Cart;
 import food_ordering.context.transaction_context.events.OnSelectTransactionDetail;
 import food_ordering.context.transaction_context.factory.TransactionDetailFactory;
 import food_ordering.context.transaction_context.factory.TransactionHeaderFactory;
-import food_ordering.context.transaction_context.models.TransactionDetail;
-import food_ordering.context.transaction_context.models.TransactionHeader;
+import food_ordering.context.transaction_context.models.entity.TransactionDetail;
+import food_ordering.context.transaction_context.models.entity.TransactionHeader;
 import utility.Auth;
 
 public class TransactionHeaderRepository {

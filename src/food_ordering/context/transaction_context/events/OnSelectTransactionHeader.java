@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import authentication.context.authentication_context.models.entity.User;
 import food_ordering.context.cart_context.models.entity.Cart;
 import food_ordering.context.transaction_context.controller.TransactionHeaderController;
-import food_ordering.context.transaction_context.models.TransactionHeader;
+import food_ordering.context.transaction_context.models.entity.TransactionHeader;
 import utility.Auth;
 
 public class OnSelectTransactionHeader {

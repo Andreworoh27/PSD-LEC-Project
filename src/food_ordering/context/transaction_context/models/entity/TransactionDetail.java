@@ -1,4 +1,4 @@
-package food_ordering.context.transaction_context.models;
+package food_ordering.context.transaction_context.models.entity;
 
 import catalogue.context.food_context.models.entity.Food;
 
