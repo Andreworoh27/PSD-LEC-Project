@@ -57,4 +57,29 @@ public class TransactionHeaderRepository {
         }
         return true;
     }
+    
+    public static ArrayList<TransactionHeader> getAllTransactionHeader() {
+        return db.getTransactionHeaders();
+    }
+    
+    public static TransactionHeader getHeaderById(String transactionId) {
+    	for(TransactionHeader h : db.getTransactionHeaders()) {
+    		if(h.getTransactionID().equals(transactionId)) {
+    			return h;
+    		}
+    	}
+    	return null;
+    }
+    
+    public static TransactionHeader getLatestTransaction(String userId) {
+    	TransactionHeader header = null;
+    	for(TransactionHeader h : getAllTransactionHeader(userId)) {
+    		if(header == null) {
+    			header = h;
+    		}else if(header.getTransactionDate().before(h.getTransactionDate())) {
+    			header = h;
+    		}
+    	}
+    	return header;
+    }
 }

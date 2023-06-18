@@ -11,4 +11,7 @@ public class TransactionDetailHandler {
     public static ArrayList<TransactionDetail> getAllTransactionDetails() {
         return TransactionDetailRepository.getAllTransactionDetails();
     }
+    public static ArrayList<TransactionDetail> getDetailTransaction(String trId){
+    	return TransactionDetailRepository.getDetailTransaction(trId);
+    }
 }

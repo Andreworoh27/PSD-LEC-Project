@@ -27,7 +27,6 @@ public class TransactionHeader {
 		this.buyer = buyer;
 		this.transactionDate = transactionDate;
 		this.pickupDate = pickupDate;
-		System.out.println(transactionDetails.size());
 		this.transactionDetails = transactionDetails;
 	}
 
@@ -64,12 +63,10 @@ public class TransactionHeader {
 	}
 
 	public String getStringPickupDateFormat() {
-		System.out.println("Pickup : " + dateFormat);
 		return dateFormat.format(pickupDate);
 	}
 
 	public String getStringTransactionDateFormat() {
-		System.out.println("tr : " + dateFormat.format(transactionDate));
 		return dateFormat.format(transactionDate);
 	}
 

@@ -65,7 +65,7 @@ public class TransactionDetailDatabaseManager {
 
     public boolean addNewTransactionDetails(TransactionDetail transactionDetail) {
         String data = transactionDetail.getTransactionId() + "#" + transactionDetail.getFood().getFoodID() + "#"
-                + transactionDetail.getQuantity().toString() + "#" + transactionDetail.getNotes() + "\n";
+                + transactionDetail.getQuantity().toString() + "#" + transactionDetail.getNotes();
         String filePath = "./src/database/transactionDetail.txt";
         appendToFile(filePath, data);
         transactionDetails.add(transactionDetail);

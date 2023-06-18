@@ -17,4 +17,15 @@ public class UtilityPage {
 		}while(opt < min || opt > max);
 		return opt;
 	}
+	
+	public static void changePage() {
+		for(int i=0; i<30; i++) {
+			System.out.println();
+		}
+	}
+	
+	public static void enterToContinue() {
+		System.out.println("Press Enter to Continue");
+		scan.nextLine();
+	}
 }

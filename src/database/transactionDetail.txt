@@ -1,4 +1,14 @@
-TR001#F0002#3#banyakin porsinya
-TR001#F0003#3#jangan banyak micin
-TR001#F0001#3#ayamnya paha
-TR002#F0006#3#esnya dikit
+TR001#FO002#3#banyakin porsinya
+TR001#FO003#3#jangan banyak micin
+TR001#FO001#3#ayamnya paha
+TR002#FO006#3#esnya dikit
+TR003#FO001#1#dfdsfjndsfj
+TR004#FO001#1#wadefsfdsdgjdfngj
+TR005#FO004#4#fdsjkfndsjfn
+TR006#FO004#1#-
+TR006#FO002#1#yum
+TR007#FO005#2#yang enak ya
+TR007#FO006#3#manis banget
+TR008#FO004#1#dadasdasdasd
+TR009#FO006#1#manis
+TR010#FO006#2#minum aja

@@ -1,14 +1,20 @@
 package view;
 
+import catalogue.context.food_context.models.value_object.Price;
+import food_ordering.context.transaction_context.events.GoToReceiptPageEvent;
 import payment.context.payment_context.events.OnPaymentSelectedEvent;
+import payment.context.payment_context.model.entity.PaymentAbstract;
 import utility.UtilityPage;
 
 public class PaymentPage {
-	public PaymentPage() {
+	public PaymentPage(Price totalPrice, String transactionId) {
+		UtilityPage.changePage();
 		viewDisplay();
 		int opt = UtilityPage.getOption(1, 3);
-		OnPaymentSelectedEvent.run(opt);
-		//TODO: Redirect to ReceiptPage 
+		PaymentAbstract payment = OnPaymentSelectedEvent.run(opt);
+		payment.pay(totalPrice);
+		UtilityPage.enterToContinue();
+		GoToReceiptPageEvent.run(transactionId); 
 	}
 	
 	public void viewDisplay() {
